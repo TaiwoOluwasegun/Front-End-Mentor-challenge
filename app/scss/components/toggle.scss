@@ -76,10 +76,7 @@
     #system:checked ~ .toggle__button{
         left: 50%;
        right: auto;
-    //    transform: translate(-50%);
-    right: 100%;
-    width: rem(18);
-    height: rem(18);
+       transform: translate(-50%);
     }
    
 }
