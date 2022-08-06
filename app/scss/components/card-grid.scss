@@ -1,0 +1,23 @@
+@use '../utils' as *;
+// @use '../globals' as *;
+
+
+
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: start;
+    gap: rem(22);
+
+    .card__subtitle{}
+    .card__count{
+        margin-bottom: 0;
+    }
+    .card__count, .card__change{
+        align-self: end;
+    }
+    img, .card__change{
+        justify-self:end ;
+    }
+}
