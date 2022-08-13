@@ -4,35 +4,36 @@
 .toggle{
     border: none;
     display: grid;
-    grid-template-columns: 1fr rem(60) 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr rem(48);
+    // grid-template-rows: repeat(2, 1fr);
     gap: rem(4.8) rem(8);
     margin: 0;
-    label{
+    legend{
         font-size: rem(14);
+        grid-column: 1/2;
 
-        &[for="dark"]{
-            grid-column: 1/2;
-            justify-self: end;
+        // &[for="dark"]{
+        //     grid-column: 1/2;
+        //     justify-self: end;
 
-        }
-        &[for="system"]{
-            grid-column: 2/3;
-            grid-row: 2/3;
-            justify-self: center;
-            align-self: start;
+        // }
+        // &[for="system"]{
+        //     grid-column: 2/3;
+        //     grid-row: 2/3;
+        //     justify-self: center;
+        //     align-self: start;
 
-        }
-        &[for="light"]{
-            grid-column: 3/4;
-        }
+        // }
+        // &[for="light"]{
+        //     grid-column: 3/4;
+        // }
       
       
     }
     &__wrapper{
         height: rem(24);
         grid-column: 2/3;
-        grid-row: 1/2;
+        // grid-row: 1/2;
         position: relative;
       
     }
@@ -42,9 +43,9 @@
         width: rem(20);
         height: rem(24);
 
-        &:focus ~ .toggle__button{
-            border: 2px solid white;
-        }
+        // &:focus ~ .toggle__button{
+        //     border: 2px solid white;
+        // }
     }
     &__background{
         display: block;
@@ -67,6 +68,10 @@
         border-radius: 50%;
         background-color: var(--dark-bg);
         transition: all 150ms ease-in-out;
+    &__button:active{
+        border: none;
+        outline: none;
+    }
     }
 
     #light:checked ~ .toggle__button{
